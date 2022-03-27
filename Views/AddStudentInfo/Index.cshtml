@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewData["Title"] = "Add New";
+}
+
+<!DOCTYPE html>
+<html>
+<body>
+
+    <form action="/AddStudentInfo/Index" method="post">
+        <input name="Id" value="0" type="hidden"/>
+        <label for="StudentName">First name:</label><br>
+        <input type="text" id="fname" name="StudentName" ><br>
+        <label for="Address">Address:</label><br>
+        <input type="text" id="lname" name="Address"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

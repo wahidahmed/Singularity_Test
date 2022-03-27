@@ -1,0 +1,34 @@
+﻿@using Singularity_Test.ViewModels;
+@model IEnumerable<StudentInfoViewModel>
+@{
+    ViewData["Title"] = "Index";
+}
+<a href="/AddStudentInfo/Index" target="_blank">Add New</a>
+<table class="" border="1">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (var item in Model)
+            {
+               <tr>
+                   <td>@item.Id</td>
+                   <td>@item.StudentName</td>
+                   <td>@item.Address</td>
+                   <td>
+                       <a href="/AddStudentInfo/Update/@item.Id"target="_blank">Update</a>
+                       <a href="/AddStudentInfo/Delete/@item.Id"target="_blank">Delete</a>
+                   </td>
+               </tr>
+            }
+        }
+    </tbody>
+</table>
+
+

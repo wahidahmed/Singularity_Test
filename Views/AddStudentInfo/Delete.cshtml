@@ -1,0 +1,21 @@
+﻿@using Singularity_Test.ViewModels;
+@model StudentInfoViewModel
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<!DOCTYPE html>
+<html>
+<body>
+
+    <form action="/AddStudentInfo/Delete" method="post">
+        <label for="StudentName">Id:</label><br>
+        <input name="Id" value="@Model.Id" readonly /><br>
+        <label for="StudentName">First name:</label><br>
+        <input type="text" id="fname" name="StudentName" value="@Model.StudentName" readonly><br>
+        <label for="Address">Address:</label><br>
+        <input type="text" id="lname" name="Address" value="@Model.Address" readonly><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

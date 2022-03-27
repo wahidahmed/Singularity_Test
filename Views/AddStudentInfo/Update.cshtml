@@ -1,0 +1,20 @@
+﻿@using Singularity_Test.ViewModels;
+@model StudentInfoViewModel
+@{
+    ViewData["Title"] = "Update";
+}
+
+<!DOCTYPE html>
+<html>
+<body>
+
+    <form action="/AddStudentInfo/Update" method="post">
+        <input name="Id" value="@Model.Id" type="hidden" />
+        <label for="StudentName">First name:</label><br>
+        <input type="text" id="fname" name="StudentName"value="@Model.StudentName"><br>
+        <label for="Address">Address:</label><br>
+        <input type="text" id="lname" name="Address"value="@Model.Address"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
